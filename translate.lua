@@ -35,10 +35,12 @@ DEFAULTLANGUAGENUMBER	= nil
 
 function InitTranslations()
 
-	LOG("Translations iit...")
-
 	for i=1, #languagesEnabled do
-		_G[languagesEnabled[1]]()
+		_G[languagesEnabled[i]]()
+	end
+
+	if DEFAULTLANGUAGENUMBER == nil then
+		DEFAULTLANGUAGENUMBER = 1
 	end
 
 end
@@ -50,7 +52,8 @@ function AddLanguage(languageName)
 	table.insert(LANGUAGES, languageName)
 	table.insert(TRANSLATIONS, {})
 
-	if languageName == defaltLanguage then
+	if languageName == defaultLanguage then
+		LOG("Default language is: "..languageNumber)
 		DEFAULTLANGUAGENUMBER = languageNumber
 	end
 
