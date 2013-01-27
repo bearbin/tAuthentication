@@ -35,6 +35,8 @@ DEFAULTLANGUAGENUMBER	= nil
 
 function InitTranslations()
 
+	LOG("Translations iit...")
+
 	for i=1, #languagesEnabled do
 		_G[languagesEnabled[1]]()
 	end
@@ -82,7 +84,7 @@ function AddTranslation(languageNumber, translationNumber, translationText)
 
 end
 
-function GetTraslation(languageNumber, playerName, translationNumber)
+function GetTranslation(languageNumber, playerName, translationNumber)
 
 	if languageNumber == 0 and playerName ~= 0 then
 
