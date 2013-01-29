@@ -38,12 +38,12 @@ function Initialize( Plugin )
 
 	-- Commands
 
-	Plugin:BindCommand( "/register", "auth.register", authRegister )
-	Plugin:BindCommand( "/login", "auth.login", authLogin )
-	--Plugin:BindCommand( "/changepass", "auth.change", authChange )
 	Plugin:AddCommand("/register", " - Register your account", "auth.register")
 	Plugin:AddCommand("/login", " - Logs you into your account", "auth.login")
 	Plugin:AddCommand("/changepass", " - Change your account password", "auth.change")
+	Plugin:AddCommand("/auth language", "Change your language", "beartrans.language")
+	Plugin:BindCommand( "/register", "auth.register", authRegister )
+	Plugin:BindCommand( "/login", "auth.login", authLogin )
 
 	-- Start up language system
 
