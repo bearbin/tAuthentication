@@ -38,12 +38,9 @@ function Initialize( Plugin )
 
 	-- Commands
 
-	Plugin:AddCommand("/register", " - Register your account", "auth.register")
-	Plugin:AddCommand("/login", " - Logs you into your account", "auth.login")
-	Plugin:AddCommand("/changepass", " - Change your account password", "auth.change")
-	Plugin:AddCommand("/auth language", "Change your language", "beartrans.language")
-	Plugin:BindCommand( "/register", "auth.register", authRegister )
-	Plugin:BindCommand( "/login", "auth.login", authLogin )
+	PluginManager:BindCommand("/register", "auth.register", authRegister, " - Register your account")
+	PluginManager:BindCommand("/login", "auth.login", authLogin, " - Logs you into your account")
+	--Plugin:BindCommand("/auth language", "Change your language", "beartrans.language")
 
 	-- Start up language system
 
